@@ -6,7 +6,6 @@ import math
 
 
 class Boundary:
-
     def __init__(self, surface, x1, x2, y1, y2, line_colour, width=5):
         self.surface = surface
         self.x1 = x1
@@ -34,7 +33,6 @@ class Boundary:
 
 
 class Particle:
-
     def __init__(self, surface, x, y, line_colour, num_rays=36):
         self.surface = surface
         self.num_rays = num_rays
@@ -75,7 +73,6 @@ class Particle:
                         record = dist
                         closest = pt
             if closest:
-                # TODO change the colour to reflect the distance!
                 pygame.draw.line(surface=self.surface,
                                  color=self.line_colour,
                                  start_pos=(self.pos[0], self.pos[1]),

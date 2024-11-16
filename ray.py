@@ -3,12 +3,10 @@ import numpy as np
 
 
 class Ray:
-
-
     def __init__(self, surface, pos, angle, line_colour, width=1):
         self.surface = surface
         self.pos = pos
-        self.dir = [np.sin(angle), np.cos(angle)]  # Angle in radians
+        self.dir = [np.sin(angle), np.cos(angle)]
         self.line_colour = line_colour
         self.width = width
 

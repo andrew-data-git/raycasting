@@ -5,13 +5,14 @@
 
 | Date Started | Date Completed |
 | ------ | ------ |
-| 01/01/2020 | --/--/-- |
+| --/--/-- | 16/11/2024 |
 
 Use Pygame to implement a raycasting visual.
+Inspired by a video from the [Coding Train](https://youtu.be/TOEi6T2mtHo?feature=shared)
 
-[GIF of usage]
+![](https://github.com/andrew-data-git/raycasting/blob/main/demo.gif)
 
 ## Features
 
-- feature 1
-- feature 2
+- Drag a lightsource with mouse
+- Randomly generated walls 

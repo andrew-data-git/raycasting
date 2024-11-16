@@ -13,9 +13,6 @@ line_colour = (255, 255, 255)
 line_width = 3
 num_walls = 10
 num_rays = 100
-# TODO make the source wiggle gently around the cursor, or like it follows it slowly
-# x_noise = 0.5
-# y_noise = 0.1
 
 # Instantiate elements
 pygame.init()
@@ -36,7 +33,6 @@ walls.append(Boundary(window, WIDTH, 0, WIDTH, HEIGHT, line_colour, width=0))
 run = True
 while run:
     # Draw --------------------------
-    # TODO experiment with other colourations
     window.fill(screen_colour)
     mouse_x, mouse_y = pygame.mouse.get_pos()
     particle = Particle(window, mouse_x, mouse_y, line_colour, num_rays)
@@ -47,12 +43,12 @@ while run:
     particle.show(show_point=True, show_rays=False)
 
     # Run ----------------------------
+    pygame.mouse.set_visible(False)
     pygame.display.update()
     main_clock.tick(600)
 
     # Buttons ------------------------
     for event in pygame.event.get():
-        # TODO make it so there is mouse acceleration, and maybe asteroid - mapping
         if event.type == MOUSEBUTTONDOWN:
             pygame.quit()
             sys.exit()
